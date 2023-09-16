@@ -1,6 +1,9 @@
+use database EXP;
+use schema first;
 
--- Use the `ref` function to select from other models
 
-select *
-from {{ ref('my_first_dbt_model') }}
-where id = 1
+create or replace view table3_view as
+SELECT ID, AGE, J, U
+FROM my_table3;
+
+select * from table3_view;
